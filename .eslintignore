@@ -4,3 +4,4 @@ internals/
 server/
 docs/
 node_modules/
+lib/

@@ -1,8 +1,10 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "extends": [
-        "airbnb",
-        "prettier"
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended",
+        "plugin:react/recommended"
     ],
     "env": {
         "browser": true,
@@ -10,12 +12,6 @@
         "jest": true,
         "es6": true
     },
-    "plugins": [
-        "import",
-        "jsx-a11y",
-        "react",
-        "prettier"
-    ],
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -36,7 +32,6 @@
         "no-use-before-define": [2, {
             "functions": false
         }],
-        "import/prefer-default-export": 0,
         "object-curly-newline": [2, {
             "multiline": true,
             "consistent": true
