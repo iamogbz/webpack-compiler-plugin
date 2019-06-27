@@ -3,10 +3,10 @@ import { Compiler, Plugin } from "webpack";
 export default class CompilerPlugin extends Plugin {
     private options: Options;
     private defaultListeners: StageListeners = {
-        buildEnd: () => {},
-        buildStart: () => {},
-        compileEnd: () => {},
-        compileStart: () => {},
+        buildEnd: () => console.log("Build exited"), // eslint-disable-line no-console
+        buildStart: () => console.log("Build started"), // eslint-disable-line no-console
+        compileEnd: () => console.log("Compile ended"), // eslint-disable-line no-console
+        compileStart: () => console.log("Compile started"), // eslint-disable-line no-console
     };
 
     public constructor(options: Options) {
