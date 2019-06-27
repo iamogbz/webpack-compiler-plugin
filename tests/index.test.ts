@@ -1,7 +1,7 @@
 import { helloWorld } from "../src";
 
-describe("entry", () => {
-    it("runs a test", () => {
+describe("entry", (): void => {
+    it("runs a test", (): void => {
         expect(helloWorld()).toMatchSnapshot();
     });
 });
