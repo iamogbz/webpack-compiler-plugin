@@ -1,26 +1,18 @@
 {
-    "name": "boilerplate",
+    "name": "project-name",
     "version": "0.0.1",
-    "description": "NodeJS Boilerplate with precommit test and linting configured",
-    "author": "iamogbz",
+    "description": "Project description",
+    "author": "project-owner",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iamogbz/node-js-boilerplate"
+        "url": "https://github.com/project-owner/project-name"
     },
     "bugs": {
-        "url": "https://github.com/iamogbz/node-js-boilerplate/issues"
+        "url": "https://github.com/project-owner/project-name/issues"
     },
-    "homepage": "https://github.com/iamogbz/node-js-boilerplate#readme",
+    "homepage": "https://github.com/project-owner/project-name#readme",
     "license": "GPL-3.0",
     "keywords": [
-        "node",
-        "nodejs",
-        "boilerplate",
-        "testing",
-        "linting",
-        "ci",
-        "package",
-        "npm"
     ],
     "engines": {
         "node": ">=8",
