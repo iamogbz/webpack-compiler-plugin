@@ -1,7 +1,5 @@
-import { helloWorld } from "../src";
+import CompilerPlugin from "index";
 
-describe("entry", (): void => {
-    it("runs a test", (): void => {
-        expect(helloWorld()).toMatchSnapshot();
-    });
+it("loads with default listeners", (): void => {
+    new CompilerPlugin({ name: "webpack-compiler-plugin", listeners: {} });
 });
