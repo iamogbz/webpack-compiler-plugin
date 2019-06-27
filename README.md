@@ -1,9 +1,9 @@
 # Webpack Compiler Plugin
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/iamgbz/webpack-compiler-plugin.svg)](https://greenkeeper.io/)
-[![Dependencies](https://david-dm.org/iamgbz/webpack-compiler-plugin.svg)](https://github.com/iamgbz/webpack-compiler-plugin)
-[![Build Status](https://travis-ci.org/iamgbz/webpack-compiler-plugin.svg?branch=master)](https://travis-ci.org/iamgbz/webpack-compiler-plugin)
-[![Coverage Status](https://coveralls.io/repos/github/iamgbz/webpack-compiler-plugin/badge.svg?branch=master)](https://coveralls.io/github/iamgbz/webpack-compiler-plugin?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/iamogbz/webpack-compiler-plugin.svg)](https://greenkeeper.io/)
+[![Dependencies](https://david-dm.org/iamogbz/webpack-compiler-plugin.svg)](https://github.com/iamogbz/webpack-compiler-plugin)
+[![Build Status](https://travis-ci.org/iamogbz/webpack-compiler-plugin.svg?branch=master)](https://travis-ci.org/iamogbz/webpack-compiler-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/iamogbz/webpack-compiler-plugin/badge.svg?branch=master)](https://coveralls.io/github/iamogbz/webpack-compiler-plugin?branch=master)
 
 Easily listen to webpack compiler hooks and execute commands on events
 

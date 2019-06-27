@@ -13,7 +13,5 @@ jobs:
     - name: build
       script: npm run build
     - stage: deploy
-      script:
-        - git remote set-url origin git@github.com:iamogbz/webpack-compiler-plugin.git --push
-        - npm run build && npm run release
+      script: npm run build && npm run release
       if: branch = master

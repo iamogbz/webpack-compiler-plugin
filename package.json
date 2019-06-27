@@ -2,15 +2,15 @@
     "name": "webpack-compiler-plugin",
     "version": "0.0.1",
     "description": "Easily listen to webpack compiler hooks and execute commands on events",
-    "author": "iamgbz",
+    "author": "iamogbz",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iamgbz/webpack-compiler-plugin"
+        "url": "https://github.com/iamogbz/webpack-compiler-plugin"
     },
     "bugs": {
-        "url": "https://github.com/iamgbz/webpack-compiler-plugin/issues"
+        "url": "https://github.com/iamogbz/webpack-compiler-plugin/issues"
     },
-    "homepage": "https://github.com/iamgbz/webpack-compiler-plugin#readme",
+    "homepage": "https://github.com/iamogbz/webpack-compiler-plugin#readme",
     "license": "GPL-3.0",
     "keywords": [
         "compile",
