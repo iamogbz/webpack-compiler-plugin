@@ -13,6 +13,10 @@
     "homepage": "https://github.com/iamgbz/webpack-compiler-plugin#readme",
     "license": "GPL-3.0",
     "keywords": [
+        "compile",
+        "plugin",
+        "shell",
+        "webpack"
     ],
     "engines": {
         "node": ">=8",
