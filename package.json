@@ -1,26 +1,22 @@
 {
-    "name": "boilerplate",
+    "name": "webpack-compiler-plugin",
     "version": "0.0.1",
-    "description": "NodeJS Boilerplate with precommit test and linting configured",
-    "author": "iamogbz",
+    "description": "Easily listen to webpack compiler hooks and execute commands on events",
+    "author": "iamgbz",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iamogbz/node-js-boilerplate"
+        "url": "https://github.com/iamgbz/webpack-compiler-plugin"
     },
     "bugs": {
-        "url": "https://github.com/iamogbz/node-js-boilerplate/issues"
+        "url": "https://github.com/iamgbz/webpack-compiler-plugin/issues"
     },
-    "homepage": "https://github.com/iamogbz/node-js-boilerplate#readme",
+    "homepage": "https://github.com/iamgbz/webpack-compiler-plugin#readme",
     "license": "GPL-3.0",
     "keywords": [
-        "node",
-        "nodejs",
-        "boilerplate",
-        "testing",
-        "linting",
-        "ci",
-        "package",
-        "npm"
+        "compile",
+        "plugin",
+        "shell",
+        "webpack"
     ],
     "engines": {
         "node": ">=8",
