@@ -1,11 +1,11 @@
-# Project Name
+# Webpack Compiler Plugin
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/project-owner/project-name.svg)](https://greenkeeper.io/)
-[![Dependencies](https://david-dm.org/project-owner/project-name.svg)](https://github.com/project-owner/project-name)
-[![Build Status](https://travis-ci.org/project-owner/project-name.svg?branch=master)](https://travis-ci.org/project-owner/project-name)
-[![Coverage Status](https://coveralls.io/repos/github/project-owner/project-name/badge.svg?branch=master)](https://coveralls.io/github/project-owner/project-name?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/iamgbz/webpack-compiler-plugin.svg)](https://greenkeeper.io/)
+[![Dependencies](https://david-dm.org/iamgbz/webpack-compiler-plugin.svg)](https://github.com/iamgbz/webpack-compiler-plugin)
+[![Build Status](https://travis-ci.org/iamgbz/webpack-compiler-plugin.svg?branch=master)](https://travis-ci.org/iamgbz/webpack-compiler-plugin)
+[![Coverage Status](https://coveralls.io/repos/github/iamgbz/webpack-compiler-plugin/badge.svg?branch=master)](https://coveralls.io/github/iamgbz/webpack-compiler-plugin?branch=master)
 
-Project description
+Easily listen to webpack compiler hooks and execute commands on events
 
 ## Shell Commands
 
