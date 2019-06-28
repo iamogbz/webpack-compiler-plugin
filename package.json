@@ -22,7 +22,7 @@
         "node": ">=8",
         "npm": ">=6"
     },
-    "main": "index.js",
+    "main": "lib/main.js",
     "scripts": {
         "lint": "eslint . --ext .js,.ts",
         "commitlint": "commitlint-travis",
