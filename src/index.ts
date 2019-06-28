@@ -1,14 +1,8 @@
 import { Compiler } from "webpack";
 
-const stageIcons: Record<Stage, string> = {
-    buildEnd: "🌇",
-    buildError: "🚒",
-    buildStart: "🌅",
-    compileEnd: "⌛",
-    compileStart: "⏳",
-    interrupt: "🚧",
-};
+import { stageMessages } from "./constants";
 
+const log = console.log.bind(console); // eslint-disable-line no-console
 const defaultListeners: Partial<StageListeners> = {
     buildError: (e: Error) => {
         console.error(e.stack); // eslint-disable-line no-console
@@ -28,15 +22,16 @@ export class WebpackCompilerPlugin {
 
     private validate(options: Options) {
         const validOptions: Options = { ...options, listeners: {} };
-        for (const stage of Object.keys(stageIcons) as Stage[]) {
+        for (const stage of Object.keys(stageMessages) as Stage[]) {
             const listener = options.listeners[stage];
             const validListener =
                 typeof listener === "function"
                     ? listener
                     : defaultListeners[stage];
             validOptions.listeners[stage] = async () => {
-                console.log(stageIcons[stage]); // eslint-disable-line no-console
+                log(stageMessages[stage].enter);
                 validListener && validListener();
+                log(stageMessages[stage].exit);
             };
         }
         return validOptions;
