@@ -28,6 +28,7 @@ const configuration: Configuration = {
         extensions: [".js", ".ts"],
         modules: [path.resolve("./src"), path.resolve("./node_modules")],
     },
+    target: "node",
 };
 
 export default configuration;
