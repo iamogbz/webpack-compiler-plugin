@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default listeners loads with default buildError listener: console error 1`] = `
+Array [
+  Array [
+    [Error: Uncaught Error],
+  ],
+]
+`;
+
+exports[`default listeners loads with default buildError listener: console log 1`] = `Array []`;
+
+exports[`default listeners loads with default buildError listener: process exit 1`] = `
+Array [
+  Array [
+    1,
+  ],
+]
+`;
+
+exports[`default listeners loads with default interrupt listener: console error 1`] = `Array []`;
+
+exports[`default listeners loads with default interrupt listener: console log 1`] = `Array []`;
+
+exports[`default listeners loads with default interrupt listener: process exit 1`] = `
+Array [
+  Array [
+    2,
+  ],
+]
+`;

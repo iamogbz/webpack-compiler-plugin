@@ -5,7 +5,7 @@ import { stageMessages } from "./constants";
 const log = console.log.bind(console); // eslint-disable-line no-console
 const defaultListeners: Partial<StageListeners> = {
     buildError: (e: Error) => {
-        console.error(e.stack); // eslint-disable-line no-console
+        console.error(e); // eslint-disable-line no-console
         process.exit(1);
     },
     interrupt: () => {
@@ -28,9 +28,9 @@ export class WebpackCompilerPlugin {
                 typeof listener === "function"
                     ? listener
                     : defaultListeners[stage];
-            validOptions.listeners[stage] = async () => {
+            validOptions.listeners[stage] = async (...args) => {
                 log(stageMessages[stage].enter);
-                validListener && validListener();
+                validListener && validListener(...args);
                 log(stageMessages[stage].exit);
             };
         }
