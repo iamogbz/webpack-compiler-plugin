@@ -1,5 +1,8 @@
-import CompilerPlugin from "index";
+import { WebpackCompilerPlugin } from "index";
 
 it("loads with default listeners", (): void => {
-    new CompilerPlugin({ name: "webpack-compiler-plugin", listeners: {} });
+    new WebpackCompilerPlugin({
+        name: "webpack-compiler-plugin",
+        listeners: {},
+    });
 });
