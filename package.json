@@ -66,14 +66,9 @@
         }
     },
     "lint-staged": {
-        "linters": {
-            "*.{js,ts}": [
-                "npm run lint",
-                "npm test -- --bail --findRelatedTests"
-            ]
-        },
-        "ignore": [
-            "**/lib/*"
+        "*.{js,ts}": [
+            "npm run lint",
+            "npm test -- --bail --findRelatedTests"
         ]
     },
     "husky": {
@@ -87,7 +82,7 @@
         "@babel/core": "^7.3.4",
         "@babel/preset-env": "^7.4.4",
         "@babel/preset-typescript": "^7.3.3",
-        "@commitlint/cli": "^8.0.0",
+        "@commitlint/cli": "^8.1.0",
         "@commitlint/config-conventional": "^8.0.0",
         "@commitlint/travis-cli": "^8.0.0",
         "@semantic-release/github": "^5.4.0",
@@ -102,7 +97,7 @@
         "acorn": "^6.1.1",
         "babel-loader": "^8.0.5",
         "babel-runtime": "^6.26.0",
-        "commitizen": "^3.0.7",
+        "commitizen": "^4.0.3",
         "coveralls": "^3.0.3",
         "cz-conventional-changelog": "^3.0.1",
         "eslint": "^6.0.0",
