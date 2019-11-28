@@ -89,7 +89,7 @@
         "@types/chrome": "0.0.91",
         "@types/copy-webpack-plugin": "^4.4.3",
         "@types/jest": "^24.0.9",
-        "@types/node": "^12.12.11",
+        "@types/node": "^12.12.14",
         "@types/source-map": "^0.5.2",
         "@types/webpack": "^4.4.25",
         "@typescript-eslint/eslint-plugin": "^2.9.0",
