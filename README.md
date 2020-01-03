@@ -42,7 +42,7 @@ See [node.process.exit](https://nodejs.org/api/process.html#process_event_exit).
 /* webpack.config.js */
 
 const { execSync } = require("child_process");
-const { WebpackCompilerPlugin } = require("webpack-compile-plugin");
+const { WebpackCompilerPlugin } = require("webpack-compiler-plugin");
 
 module.exports = {
     mode: "development",
