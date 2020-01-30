@@ -109,7 +109,7 @@
         "eslint-plugin-react": "^7.18.0",
         "husky": "^4.2.1",
         "jest": "^25.1.0",
-        "lint-staged": "^10.0.4",
+        "lint-staged": "^10.0.5",
         "prettier": "^1.19.1",
         "prettier-eslint": "^9.0.1",
         "rxjs": "^6.5.4",
