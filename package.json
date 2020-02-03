@@ -25,11 +25,11 @@
     "main": "main.js",
     "types": "main.d.ts",
     "scripts": {
-        "lint": "eslint . --ext .js,.ts",
+        "lint": "eslint ./src ./tests --ext .js,.ts",
         "commitlint": "commitlint-travis",
         "build": "webpack --mode=production",
         "build-watch": "webpack --mode=development --watch",
-        "build-types": "tsc --declaration --emitDeclarationOnly",
+        "build-types": "rm -rf ./built && tsc --emitDeclarationOnly",
         "test": "jest",
         "coveralls": "cat ./artifacts/coverage/lcov.info | coveralls",
         "typecheck": "tsc --noEmit",

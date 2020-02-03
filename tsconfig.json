@@ -4,10 +4,12 @@
         "moduleResolution": "node",
         "outDir": "./built",
         "target": "es6",
+        "composite": true,
+        "declaration": true,
         "allowSyntheticDefaultImports": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true
     },
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "lib"]
 }
