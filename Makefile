@@ -21,7 +21,7 @@ typescript:
 	@echo "typescript: branch created, merge to master to complete coversion"
 
 build:
-	rm -r ./built
+	rm -rf ./built
 	npm run build-types
 	npm run build
 
