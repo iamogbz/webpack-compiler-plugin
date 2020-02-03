@@ -11,7 +11,7 @@ jobs:
         - npm test -- --ci --coverage
         - npm run coveralls
     - name: build
-      script: npm run build
+      script: make build
     - stage: deploy
-      script: npm run build && npm run release
+      script: make build && npm run release
       if: branch = master

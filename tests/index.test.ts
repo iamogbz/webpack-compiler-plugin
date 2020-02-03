@@ -36,19 +36,16 @@ describe("default listeners", () => {
     it.each([
         ["interrupt", ["SIGINT"]],
         ["buildError", ["uncaughtException", new Error("Uncaught Error")]],
-    ])(
-        "loads with default %s listener",
-        (_, [event, arg]): void => {
-            newPlugin();
-            process.emit(
-                event as NodeJS.Signals,
-                (arg as unknown) as NodeJS.Signals,
-            );
-            expect(consoleErrorSpy.mock.calls).toMatchSnapshot("console error");
-            expect(consoleLogSpy.mock.calls).toMatchSnapshot("console log");
-            expect(processExitSpy.mock.calls).toMatchSnapshot("process exit");
-        },
-    );
+    ])("loads with default %s listener", (_, [event, arg]): void => {
+        newPlugin();
+        process.emit(
+            event as NodeJS.Signals,
+            (arg as unknown) as NodeJS.Signals,
+        );
+        expect(consoleErrorSpy.mock.calls).toMatchSnapshot("console error");
+        expect(consoleLogSpy.mock.calls).toMatchSnapshot("console log");
+        expect(processExitSpy.mock.calls).toMatchSnapshot("process exit");
+    });
 });
 
 describe("apply listeners", () => {
@@ -58,6 +55,7 @@ describe("apply listeners", () => {
         ["buildError", ["uncaughtException", new Error("Uncaught Error")]],
     ])(
         "applies handler for stage %s",
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (stage: Stage, [event, arg]: [NodeJS.Signals, any]) => {
             const mockHandler = jest.fn();
             newPlugin({ [stage]: mockHandler });

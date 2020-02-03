@@ -23,11 +23,13 @@
         "npm": ">=6"
     },
     "main": "lib/main.js",
+    "types": "lib/main.d.ts",
     "scripts": {
         "lint": "eslint . --ext .js,.ts",
         "commitlint": "commitlint-travis",
         "build": "webpack --mode=production",
         "build-watch": "webpack --mode=development --watch",
+        "build-types": "tsc --declaration --emitDeclarationOnly",
         "test": "jest",
         "coveralls": "cat ./artifacts/coverage/lcov.info | coveralls",
         "typecheck": "tsc --noEmit",
@@ -38,7 +40,12 @@
         "plugins": [
             "@semantic-release/commit-analyzer",
             "@semantic-release/release-notes-generator",
-            "@semantic-release/npm",
+            [
+                "@semantic-release/npm",
+                {
+                    "pkgRoot": "./lib"
+                }
+            ],
             "@semantic-release/github"
         ]
     },
@@ -98,6 +105,7 @@
         "babel-loader": "^8.0.6",
         "babel-runtime": "^6.26.0",
         "commitizen": "^4.0.3",
+        "copy-webpack-plugin": "^5.1.1",
         "coveralls": "^3.0.9",
         "cz-conventional-changelog": "^3.1.0",
         "eslint": "^6.8.0",
