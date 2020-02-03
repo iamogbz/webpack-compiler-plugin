@@ -22,8 +22,8 @@
         "node": ">=8",
         "npm": ">=6"
     },
-    "main": "lib/main.js",
-    "types": "lib/main.d.ts",
+    "main": "main.js",
+    "types": "main.d.ts",
     "scripts": {
         "lint": "eslint . --ext .js,.ts",
         "commitlint": "commitlint-travis",
