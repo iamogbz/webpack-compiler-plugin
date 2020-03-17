@@ -100,7 +100,7 @@
         "@types/source-map": "^0.5.2",
         "@types/webpack": "^4.41.7",
         "@typescript-eslint/eslint-plugin": "^2.23.0",
-        "@typescript-eslint/parser": "^2.23.0",
+        "@typescript-eslint/parser": "^2.24.0",
         "acorn": "^7.1.1",
         "babel-loader": "^8.0.6",
         "babel-runtime": "^6.26.0",
