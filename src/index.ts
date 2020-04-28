@@ -1,6 +1,6 @@
 import { Compiler } from "webpack";
 
-import { stageMessages } from "./constants";
+import { defaultStageMessages } from "./constants";
 
 const log = console.log.bind(console); // eslint-disable-line no-console
 const defaultListeners: Partial<StageListeners> = {
@@ -20,18 +20,30 @@ export class WebpackCompilerPlugin {
         this.options = this.validate(options);
     }
 
-    private validate(options: Options) {
-        const validOptions: Options = { ...options, listeners: {} };
+    private validate({
+        stageMessages = defaultStageMessages,
+        ...options
+    }: Options) {
+        const validOptions: Options = {
+            ...options,
+            stageMessages,
+            listeners: {},
+        };
         for (const stage of Object.keys(stageMessages) as Stage[]) {
+            const enterMessage = stageMessages?.[stage]?.enter;
+            const exitMessage = stageMessages?.[stage]?.exit;
+            if (!enterMessage && !exitMessage) {
+                continue;
+            }
             const listener = options.listeners[stage];
             const validListener =
                 typeof listener === "function"
                     ? listener
                     : defaultListeners[stage];
             validOptions.listeners[stage] = async (...args) => {
-                log(stageMessages[stage].enter);
+                enterMessage && log(enterMessage);
                 validListener && validListener(...args);
-                log(stageMessages[stage].exit);
+                exitMessage && log(exitMessage);
             };
         }
         return validOptions;

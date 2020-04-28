@@ -1,30 +1,29 @@
-const enterStageMessage = (m: TemplateStringsArray) =>
-    `\n------${String(m) ? `\n${m}` : ""}`;
+const stageMessage = (m: TemplateStringsArray) => (m ? `\n${String(m)}` : "");
 
-const endStageMessage = (m: TemplateStringsArray) =>
-    `${String(m) ? `${m}\n` : ""}------`;
-
-export const stageMessages: Record<Stage, { enter?: string; exit?: string }> = {
+export const defaultStageMessages: Record<
+    Stage,
+    { enter?: string; exit?: string }
+> = {
     buildEnd: {
-        enter: enterStageMessage`🌇  Build exiting...`,
-        exit: endStageMessage``,
+        enter: stageMessage`🌇 Build exiting 🌇`,
+        exit: stageMessage`🌇 🌇 🌇 🌇 🌇`,
     },
     buildError: {
-        enter: enterStageMessage`🚒  Build failed.`,
+        enter: stageMessage`🚒 Build failed 🚒`,
     },
     buildStart: {
-        enter: enterStageMessage`🌅  Build starting...`,
-        exit: endStageMessage``,
+        enter: stageMessage`🌅 Build starting 🌅`,
+        exit: stageMessage`🌅 🌅 🌅 🌅 🌅`,
     },
     compileEnd: {
-        enter: enterStageMessage`⌛  Code compiled.`,
-        exit: endStageMessage``,
+        enter: stageMessage`⌛ Code compiled ⌛`,
+        exit: stageMessage`⌛ ⌛ ⌛ ⌛ ⌛`,
     },
     compileStart: {
-        enter: enterStageMessage`⏳  Code compiling...`,
-        exit: endStageMessage``,
+        enter: stageMessage`⏳ Code compiling ⏳`,
+        exit: stageMessage`⏳ ⏳ ⏳ ⏳ ⏳`,
     },
     interrupt: {
-        enter: enterStageMessage`🚧  Build interrupted.`,
+        enter: stageMessage`🚧 Build interrupted 🚧`,
     },
 };
