@@ -28,7 +28,7 @@ const newPlugin = (listeners: Partial<StageListeners> = {}) => {
 afterEach(() => {
     jest.clearAllMocks();
     const signals = ["exit", "SIGINT", "uncaughtException"];
-    signals.map(s => process.removeAllListeners(s));
+    signals.map(process.removeAllListeners.bind(process));
 });
 afterAll(jest.restoreAllMocks);
 
