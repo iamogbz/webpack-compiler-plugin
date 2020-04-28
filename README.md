@@ -53,6 +53,7 @@ module.exports = {
                 buildStart: () => execSync("echo 'hello'"),
                 buildEnd: () => execSync("echo 'bye bye'"),
             },
+            stageMessages: null, // to disable stage messages
         }),
     ],
 };

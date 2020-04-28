@@ -7,9 +7,11 @@ type Stage =
     | "compileEnd"
     | "compileStart"
     | "interrupt";
-type StageListeners = { [key in Stage]: Listener };
+type StageListeners = Record<Stage, Listener>;
+type StageMessages = Record<Stage, { enter?: string; exit?: string }>;
 
 interface Options {
     name: string;
+    stageMessages?: Partial<StageMessages>;
     listeners: Partial<StageListeners>;
 }
