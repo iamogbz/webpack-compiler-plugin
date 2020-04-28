@@ -1,11 +1,11 @@
 import { Compiler } from "webpack";
 
+import { logger } from "./logger";
 import { defaultStageMessages } from "./constants";
 
-const log = console.log.bind(console); // eslint-disable-line no-console
 const defaultListeners: Partial<StageListeners> = {
     buildError: (e: Error) => {
-        console.error(e); // eslint-disable-line no-console
+        logger.error(e); // eslint-disable-line no-console
         process.exit(1);
     },
     interrupt: () => {
@@ -27,23 +27,20 @@ export class WebpackCompilerPlugin {
         const validOptions: Options = {
             ...options,
             stageMessages,
-            listeners: {},
         };
-        for (const stage of Object.keys(stageMessages) as Stage[]) {
+        const listeners = { ...defaultListeners, ...options.listeners };
+        for (const stage of Object.keys(listeners) as Stage[]) {
             const enterMessage = stageMessages?.[stage]?.enter;
             const exitMessage = stageMessages?.[stage]?.exit;
-            if (!enterMessage && !exitMessage) {
-                continue;
-            }
-            const listener = options.listeners[stage];
+            const listener = listeners[stage];
             const validListener =
                 typeof listener === "function"
                     ? listener
                     : defaultListeners[stage];
             validOptions.listeners[stage] = async (...args) => {
-                enterMessage && log(enterMessage);
+                enterMessage && logger.info(enterMessage);
                 validListener && validListener(...args);
-                exitMessage && log(exitMessage);
+                exitMessage && logger.info(exitMessage);
             };
         }
         return validOptions;
@@ -51,11 +48,23 @@ export class WebpackCompilerPlugin {
 
     public apply(compiler: Compiler) {
         const { name, listeners } = this.options;
-        compiler.hooks.afterPlugins.tap(name, listeners.buildStart);
-        process.on("exit", listeners.buildEnd);
-        process.on("uncaughtException", listeners.buildError);
-        compiler.hooks.compilation.tap(name, listeners.compileStart);
-        compiler.hooks.done.tap(name, listeners.compileEnd);
-        process.on("SIGINT", listeners.interrupt);
+        if (listeners.buildStart) {
+            compiler.hooks.afterPlugins.tap(name, listeners.buildStart);
+        }
+        if (listeners.buildEnd) {
+            process.on("exit", listeners.buildEnd);
+        }
+        if (listeners.buildError) {
+            process.on("uncaughtException", listeners.buildError);
+        }
+        if (listeners.compileStart) {
+            compiler.hooks.compilation.tap(name, listeners.compileStart);
+        }
+        if (listeners.compileEnd) {
+            compiler.hooks.done.tap(name, listeners.compileEnd);
+        }
+        if (listeners.interrupt) {
+            process.on("SIGINT", listeners.interrupt);
+        }
     }
 }

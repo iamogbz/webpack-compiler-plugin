@@ -8,7 +8,14 @@ Array [
 ]
 `;
 
-exports[`default listeners loads with default buildError listener: console log 1`] = `Array []`;
+exports[`default listeners loads with default buildError listener: console log 1`] = `
+Array [
+  Array [
+    "
+🚒 Build failed 🚒",
+  ],
+]
+`;
 
 exports[`default listeners loads with default buildError listener: process exit 1`] = `
 Array [
@@ -20,12 +27,64 @@ Array [
 
 exports[`default listeners loads with default interrupt listener: console error 1`] = `Array []`;
 
-exports[`default listeners loads with default interrupt listener: console log 1`] = `Array []`;
+exports[`default listeners loads with default interrupt listener: console log 1`] = `
+Array [
+  Array [
+    "
+🚧 Build interrupted 🚧",
+  ],
+]
+`;
 
 exports[`default listeners loads with default interrupt listener: process exit 1`] = `
 Array [
   Array [
     2,
+  ],
+]
+`;
+
+exports[`stage messages does not use default state messages buildStart 1`] = `Array []`;
+
+exports[`stage messages does not use default state messages compileEnd 1`] = `Array []`;
+
+exports[`stage messages does not use default state messages compileStart 1`] = `Array []`;
+
+exports[`stage messages uses default state messages buildStart: buildStart 1`] = `
+Array [
+  Array [
+    "
+🌅 Build starting 🌅",
+  ],
+  Array [
+    "
+🌅 🌅 🌅 🌅 🌅",
+  ],
+]
+`;
+
+exports[`stage messages uses default state messages compileEnd: compileEnd 1`] = `
+Array [
+  Array [
+    "
+⌛ Code compiled ⌛",
+  ],
+  Array [
+    "
+⌛ ⌛ ⌛ ⌛ ⌛",
+  ],
+]
+`;
+
+exports[`stage messages uses default state messages compileStart: compileStart 1`] = `
+Array [
+  Array [
+    "
+⏳ Code compiling ⏳",
+  ],
+  Array [
+    "
+⏳ ⏳ ⏳ ⏳ ⏳",
   ],
 ]
 `;
