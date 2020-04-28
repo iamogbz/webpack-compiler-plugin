@@ -50,7 +50,7 @@ exports[`stage messages does not use default state messages compileEnd 1`] = `Ar
 
 exports[`stage messages does not use default state messages compileStart 1`] = `Array []`;
 
-exports[`stage messages uses default state messages buildStart: buildStart 1`] = `
+exports[`stage messages uses default state messages buildStart 1`] = `
 Array [
   Array [
     "
@@ -63,7 +63,7 @@ Array [
 ]
 `;
 
-exports[`stage messages uses default state messages compileEnd: compileEnd 1`] = `
+exports[`stage messages uses default state messages compileEnd 1`] = `
 Array [
   Array [
     "
@@ -76,7 +76,7 @@ Array [
 ]
 `;
 
-exports[`stage messages uses default state messages compileStart: compileStart 1`] = `
+exports[`stage messages uses default state messages compileStart 1`] = `
 Array [
   Array [
     "

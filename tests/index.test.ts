@@ -95,7 +95,7 @@ describe("stage messages", () => {
         const mockHandler = jest.fn();
         newPlugin({ listeners: { [stage as Stage]: mockHandler } });
         tapFn.mock.calls[0][1]();
-        expect(consoleLogSpy.mock.calls).toMatchSnapshot(stage);
+        expect(consoleLogSpy.mock.calls).toMatchSnapshot();
     });
 
     it.each([
