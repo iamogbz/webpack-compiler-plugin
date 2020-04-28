@@ -15,6 +15,7 @@ const configuration: Configuration = {
                     loader: "babel-loader",
                     options: {
                         presets: ["@babel/preset-typescript"],
+                        plugins: ["@babel/plugin-proposal-optional-chaining"],
                     },
                 },
             },
