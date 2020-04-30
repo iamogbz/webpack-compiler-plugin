@@ -21,15 +21,20 @@ export class WebpackCompilerPlugin {
     }
 
     private validate({
+        listeners = {},
         stageMessages = defaultStageMessages,
         ...options
     }: Options) {
         const validOptions: Options = {
             ...options,
             stageMessages,
+            listeners,
         };
-        const listeners = { ...defaultListeners, ...options.listeners };
-        for (const stage of Object.keys(listeners) as Stage[]) {
+        const stages = new Set([
+            ...Object.keys(listeners ?? {}),
+            ...Object.keys(stageMessages ?? {}),
+        ]);
+        for (const stage of stages as Set<Stage>) {
             const enterMessage = stageMessages?.[stage]?.enter;
             const exitMessage = stageMessages?.[stage]?.exit;
             const listener = listeners[stage];

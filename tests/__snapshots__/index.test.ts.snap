@@ -56,10 +56,6 @@ Array [
     "
 🌅 Build starting 🌅",
   ],
-  Array [
-    "
-🌅 🌅 🌅 🌅 🌅",
-  ],
 ]
 `;
 
@@ -69,10 +65,6 @@ Array [
     "
 ⌛ Code compiled ⌛",
   ],
-  Array [
-    "
-⌛ ⌛ ⌛ ⌛ ⌛",
-  ],
 ]
 `;
 
@@ -81,10 +73,6 @@ Array [
   Array [
     "
 ⏳ Code compiling ⏳",
-  ],
-  Array [
-    "
-⏳ ⏳ ⏳ ⏳ ⏳",
   ],
 ]
 `;

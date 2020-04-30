@@ -1,7 +1,6 @@
 import { Compiler } from "webpack";
 import { WebpackCompilerPlugin } from "index";
 import { logger } from "logger";
-import { listeners } from "cluster";
 
 const processExitSpy = jest
     .spyOn(process, "exit")
@@ -95,6 +94,7 @@ describe("stage messages", () => {
         const mockHandler = jest.fn();
         newPlugin({ listeners: { [stage as Stage]: mockHandler } });
         tapFn.mock.calls[0][1]();
+        expect(consoleLogSpy).toHaveBeenCalledTimes(1);
         expect(consoleLogSpy.mock.calls).toMatchSnapshot();
     });
 
@@ -109,6 +109,7 @@ describe("stage messages", () => {
             stageMessages: null,
         });
         tapFn.mock.calls[0][1]();
+        expect(consoleLogSpy).toHaveBeenCalledTimes(0);
         expect(consoleLogSpy.mock.calls).toMatchSnapshot();
     });
 });
