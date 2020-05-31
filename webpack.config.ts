@@ -30,13 +30,15 @@ const configuration: Configuration = {
         path: path.resolve(__dirname, "lib"),
     },
     plugins: [
-        new CopyPlugin([{ from: "built/src/index.d.ts", to: "main.d.ts" }]),
-        new CopyPlugin([
-            "built/src/constants.d.ts",
-            "src/globals.d.ts",
-            "package.json",
-            "README.md",
-        ]),
+        new CopyPlugin({
+            patterns: [
+                { from: "built/src/index.d.ts", to: "main.d.ts" },
+                "built/src/constants.d.ts",
+                "src/globals.d.ts",
+                "package.json",
+                "README.md",
+            ],
+        }),
     ],
     resolve: {
         extensions: [".js", ".ts"],
