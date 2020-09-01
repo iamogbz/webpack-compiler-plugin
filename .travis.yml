@@ -8,13 +8,14 @@ jobs:
       script: npm run lint
     - name: test
       script:
+        - env
         - npm test -- --ci --coverage
         - npm run coveralls
     - name: build
       script: make build
     - stage: commitlint
       script: npm run commitlint
-      if: NOT sender =~ /^dependabot/
+      if: sender !~ /^(dependabot|github)/
     - stage: deploy
       script: make build && npm run release
       if: branch = master
