@@ -63,9 +63,6 @@
         "coverageDirectory": "./artifacts/coverage"
     },
     "commitlint": {
-        "rules": {
-            "header-max-length": [0, "always", 0]
-        },
         "extends": [
             "@commitlint/config-conventional"
         ]
