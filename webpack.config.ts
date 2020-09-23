@@ -25,13 +25,18 @@ const configuration: Configuration = {
         ],
     },
     output: {
-        filename: "main.js",
+        filename: "index.js",
         libraryTarget: "commonjs",
         path: path.resolve(__dirname, "lib"),
     },
     plugins: [
         new CopyPlugin({
-            patterns: ["built/src", "package.json", "README.md"],
+            patterns: [
+                "package.json",
+                "README.md",
+                "src/**/*.d.ts",
+                "built/src",
+            ],
         }),
     ],
     resolve: {

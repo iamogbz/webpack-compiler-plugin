@@ -22,7 +22,7 @@
         "node": ">=8",
         "npm": ">=6"
     },
-    "main": "main.js",
+    "main": "index.js",
     "types": "index.d.ts",
     "scripts": {
         "lint": "eslint ./src ./tests --ext .js,.ts",
