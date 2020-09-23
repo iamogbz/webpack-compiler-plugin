@@ -42,6 +42,14 @@ afterEach(() => {
 afterAll(jest.restoreAllMocks);
 
 describe("default listeners", () => {
+    const isTTY = process.stdout.isTTY;
+    beforeAll(() => {
+        process.stdout.isTTY = true;
+    });
+    afterAll(() => {
+        process.stdout.isTTY = isTTY;
+    });
+
     it.each([
         ["interrupt", ["SIGINT"]],
         ["buildError", ["uncaughtException", new Error("Uncaught Error")]],
