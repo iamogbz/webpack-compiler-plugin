@@ -1,6 +1,8 @@
+import { execSync } from "child_process";
 import * as path from "path";
 import { Configuration } from "webpack";
 import * as CopyPlugin from "copy-webpack-plugin";
+import { WebpackCompilerPlugin } from "./src";
 
 const outputPath = path.resolve(__dirname, "lib");
 const configuration: Configuration = {
@@ -31,6 +33,20 @@ const configuration: Configuration = {
         path: outputPath,
     },
     plugins: [
+        new WebpackCompilerPlugin({
+            name: "compiler",
+            listeners: {
+                buildStart: () => execSync("npm run clean"),
+                compileStart: () => execSync("npm run build-types"),
+            },
+            stageMessages: {
+                buildStart: { enter: "clean ouput path" },
+                compileStart: {
+                    enter: "building types: started",
+                    exit: "building types: finished",
+                },
+            },
+        }),
         new CopyPlugin({
             patterns: [
                 "package.json",
@@ -45,6 +61,9 @@ const configuration: Configuration = {
         modules: [path.resolve("./src"), path.resolve("./node_modules")],
     },
     target: "node",
+    watchOptions: {
+        ignored: ["./node_modules/**", "./tests/**", "./built/**", outputPath],
+    },
 };
 
 export default configuration;

@@ -26,6 +26,7 @@
     "types": "index.d.ts",
     "scripts": {
         "lint": "eslint ./src ./tests --ext .js,.ts",
+        "clean": "rm -rf ./lib && rm -rf ./build",
         "commitlint": "commitlint-travis",
         "build": "webpack --mode=production",
         "build-watch": "webpack --mode=development --watch",

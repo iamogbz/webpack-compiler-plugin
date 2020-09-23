@@ -87,6 +87,13 @@ describe("apply listeners", () => {
 });
 
 describe("stage messages", () => {
+    beforeAll(() => {
+        process.env.NO_COLOR = "true";
+    });
+    afterAll(() => {
+        delete process.env.NO_COLOR;
+    });
+
     it.each([
         ["buildStart", mockCompiler.hooks.afterPlugins.tap],
         ["compileEnd", mockCompiler.hooks.done.tap],

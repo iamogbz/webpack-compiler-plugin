@@ -1,27 +1,25 @@
 import { Stage } from "./types";
 
-const stageMessage = (m: TemplateStringsArray) => (m ? `\n${String(m)}` : "");
-
 export const defaultStageMessages: Record<
     Stage,
     { enter?: string; exit?: string }
 > = {
     buildEnd: {
-        enter: stageMessage`🌇 Build exiting 🌇`,
+        enter: " 🌇 build exiting",
     },
     buildError: {
-        enter: stageMessage`🚒 Build failed 🚒`,
+        enter: "🚒 build failed",
     },
     buildStart: {
-        enter: stageMessage`🌅 Build starting 🌅`,
+        enter: "🌅 build starting",
     },
     compileEnd: {
-        enter: stageMessage`⌛ Code compiled ⌛`,
+        enter: "⌛ code compiled",
     },
     compileStart: {
-        enter: stageMessage`⏳ Code compiling ⏳`,
+        enter: "⏳ code compiling",
     },
     interrupt: {
-        enter: stageMessage`🚧 Build interrupted 🚧`,
+        enter: "🚧 build interrupted",
     },
 };
