@@ -2,6 +2,7 @@ import * as path from "path";
 import { Configuration } from "webpack";
 import * as CopyPlugin from "copy-webpack-plugin";
 
+const outputPath = path.resolve(__dirname, "lib");
 const configuration: Configuration = {
     devtool: "source-map",
     entry: "./src",
@@ -25,18 +26,17 @@ const configuration: Configuration = {
         ],
     },
     output: {
-        filename: "main.js",
+        filename: "index.js",
         libraryTarget: "commonjs",
-        path: path.resolve(__dirname, "lib"),
+        path: outputPath,
     },
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: "built/src/index.d.ts", to: "main.d.ts" },
-                "built/src/constants.d.ts",
-                "src/globals.d.ts",
                 "package.json",
                 "README.md",
+                "built/src",
+                { from: "src/types.d.ts", to: outputPath },
             ],
         }),
     ],

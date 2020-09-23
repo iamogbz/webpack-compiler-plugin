@@ -22,14 +22,14 @@
         "node": ">=8",
         "npm": ">=6"
     },
-    "main": "main.js",
-    "types": "main.d.ts",
+    "main": "index.js",
+    "types": "index.d.ts",
     "scripts": {
         "lint": "eslint ./src ./tests --ext .js,.ts",
         "commitlint": "commitlint-travis",
         "build": "webpack --mode=production",
         "build-watch": "webpack --mode=development --watch",
-        "build-types": "rm -rf ./built && tsc --emitDeclarationOnly",
+        "build-types": "tsc --emitDeclarationOnly",
         "test": "jest",
         "coveralls": "cat ./artifacts/coverage/lcov.info | coveralls",
         "typecheck": "tsc --noEmit",

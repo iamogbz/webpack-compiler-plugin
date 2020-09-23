@@ -1,6 +1,7 @@
 import { Compiler } from "webpack";
 import { WebpackCompilerPlugin } from "index";
 import { logger } from "logger";
+import { Stage, StageListeners, StageMessages } from "../src/types";
 
 const processExitSpy = jest
     .spyOn(process, "exit")

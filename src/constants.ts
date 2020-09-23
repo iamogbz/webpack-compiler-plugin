@@ -1,3 +1,5 @@
+import { Stage } from "./types";
+
 const stageMessage = (m: TemplateStringsArray) => (m ? `\n${String(m)}` : "");
 
 export const defaultStageMessages: Record<
