@@ -12,7 +12,7 @@ exports[`default listeners loads with default buildError listener: console log 1
 Array [
   Array [
     "
-[1mwebpack-compiler-plugin:[22m 🚒 build failed",
+[1mwebpack-compiler-plugin:[22m [31m🚒 build failed[39m",
   ],
 ]
 `;
@@ -31,7 +31,7 @@ exports[`default listeners loads with default interrupt listener: console log 1`
 Array [
   Array [
     "
-[1mwebpack-compiler-plugin:[22m 🚧 build interrupted",
+[1mwebpack-compiler-plugin:[22m [33m🚧 build interrupted[39m",
   ],
 ]
 `;
@@ -54,7 +54,7 @@ exports[`stage messages uses default state messages buildStart 1`] = `
 Array [
   Array [
     "
-webpack-compiler-plugin: 🌅 build starting",
+webpack-compiler-plugin: [34m🚀 build starting[39m",
   ],
 ]
 `;
@@ -63,7 +63,7 @@ exports[`stage messages uses default state messages compileEnd 1`] = `
 Array [
   Array [
     "
-webpack-compiler-plugin: ⌛ code compiled",
+webpack-compiler-plugin: [32m⌛ code compiled[39m",
   ],
 ]
 `;
@@ -72,7 +72,7 @@ exports[`stage messages uses default state messages compileStart 1`] = `
 Array [
   Array [
     "
-webpack-compiler-plugin: ⏳ code compiling",
+webpack-compiler-plugin: [34m⏳ code compiling[39m",
   ],
 ]
 `;
