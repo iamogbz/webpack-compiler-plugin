@@ -42,6 +42,14 @@ afterEach(() => {
 afterAll(jest.restoreAllMocks);
 
 describe("default listeners", () => {
+    const isTTY = process.stdout.isTTY;
+    beforeAll(() => {
+        process.stdout.isTTY = true;
+    });
+    afterAll(() => {
+        process.stdout.isTTY = isTTY;
+    });
+
     it.each([
         ["interrupt", ["SIGINT"]],
         ["buildError", ["uncaughtException", new Error("Uncaught Error")]],
@@ -87,6 +95,13 @@ describe("apply listeners", () => {
 });
 
 describe("stage messages", () => {
+    beforeAll(() => {
+        process.env.NO_COLOR = "true";
+    });
+    afterAll(() => {
+        delete process.env.NO_COLOR;
+    });
+
     it.each([
         ["buildStart", mockCompiler.hooks.afterPlugins.tap],
         ["compileEnd", mockCompiler.hooks.done.tap],

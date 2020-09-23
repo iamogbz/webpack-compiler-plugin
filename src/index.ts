@@ -3,6 +3,7 @@ import { Compiler } from "webpack";
 import { logger } from "./logger";
 import { defaultStageMessages } from "./constants";
 import { Options, Stage, StageListeners } from "./types";
+import { stageMessage } from "./terminal";
 
 const defaultListeners: Partial<StageListeners> = {
     buildError: (e: Error) => {
@@ -44,9 +45,11 @@ export class WebpackCompilerPlugin {
                     ? listener
                     : defaultListeners[stage];
             validOptions.listeners[stage] = async (...args) => {
-                enterMessage && logger.info(enterMessage);
+                enterMessage &&
+                    logger.info(stageMessage(options.name, enterMessage));
                 validListener && validListener(...args);
-                exitMessage && logger.info(exitMessage);
+                exitMessage &&
+                    logger.info(stageMessage(options.name, exitMessage));
             };
         }
         return validOptions;
