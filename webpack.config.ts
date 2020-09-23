@@ -31,13 +31,7 @@ const configuration: Configuration = {
     },
     plugins: [
         new CopyPlugin({
-            patterns: [
-                { from: "built/src/index.d.ts", to: "main.d.ts" },
-                "built/src/constants.d.ts",
-                "src/globals.d.ts",
-                "package.json",
-                "README.md",
-            ],
+            patterns: ["built/src", "package.json", "README.md"],
         }),
     ],
     resolve: {

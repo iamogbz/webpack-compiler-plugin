@@ -2,6 +2,7 @@ import { Compiler } from "webpack";
 
 import { logger } from "./logger";
 import { defaultStageMessages } from "./constants";
+import { Options, Stage, StageListeners } from "./types";
 
 const defaultListeners: Partial<StageListeners> = {
     buildError: (e: Error) => {

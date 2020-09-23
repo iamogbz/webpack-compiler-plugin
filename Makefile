@@ -20,8 +20,11 @@ typescript:
 	@git reset master --soft && git add --all && git commit -m "chore: typescript"
 	@echo "typescript: branch created, merge to master to complete coversion"
 
-build:
+clean:
+	rm -rf ./lib
 	rm -rf ./built
+
+build: clean
 	npm run build-types
 	npm run build
 
