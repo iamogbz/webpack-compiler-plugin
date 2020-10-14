@@ -1,17 +1,19 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended",
-        "plugin:react/recommended"
-    ],
     "env": {
         "browser": true,
         "node": true,
         "jest": true,
         "es6": true
     },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
+    "globals": {
+        "browser": false
+    },
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -19,11 +21,9 @@
             "jsx": true
         }
     },
-    "globals": {
-        "browser": false
-    },
     "rules": {
         "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
         "arrow-parens": [2, "as-needed"],
         "arrow-body-style": [2, "as-needed"],
         "class-methods-use-this": 0,
@@ -40,17 +40,7 @@
         "object-property-newline": [2, {
             "allowAllPropertiesOnSameLine": true
         }],
-        "react/jsx-first-prop-new-line": [2, "multiline"],
-        "react/jsx-indent": [2, 4],
-        "react/jsx-indent-props": [2, 4],
-        "prettier/prettier": [2, {
-            "bracketSpacing": true,
-            "jsxBracketSameLine": false,
-            "semi": true,
-            "singleQuote": false,
-            "tabWidth": 4,
-            "trailingComma": "all"
-        }]
+        "prettier/prettier": 2
     },
     "settings": {
         "import/resolver": {
