@@ -1,15 +1,16 @@
 {
     "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
         "baseUrl": "./src",
-        "moduleResolution": "node",
-        "outDir": "./built",
-        "target": "es6",
         "composite": true,
         "declaration": true,
-        "allowSyntheticDefaultImports": true,
-        "noImplicitReturns": true,
+        "moduleResolution": "node",
         "noFallthroughCasesInSwitch": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "outDir": "./built",
+        "skipLibCheck": true,
+        "target": "es6"
     },
     "exclude": ["node_modules", "lib", "built"]
 }
