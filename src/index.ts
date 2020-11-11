@@ -44,12 +44,15 @@ export class WebpackCompilerPlugin {
                 typeof listener === "function"
                     ? listener
                     : defaultListeners[stage];
-            validOptions.listeners[stage] = async (...args) => {
+            validOptions.listeners[stage] = (...args) => {
                 enterMessage &&
                     logger.info(stageMessage(options.name, enterMessage));
-                validListener && validListener(...args);
-                exitMessage &&
-                    logger.info(stageMessage(options.name, exitMessage));
+                return Promise.resolve(
+                    validListener && validListener(...args),
+                ).then(() => {
+                    exitMessage &&
+                        logger.info(stageMessage(options.name, exitMessage));
+                });
             };
         }
         return validOptions;
