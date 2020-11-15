@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/iamogbz/webpack-compiler-plugin.svg?branch=master)](https://travis-ci.org/iamogbz/webpack-compiler-plugin)
 [![Coverage Status](https://coveralls.io/repos/github/iamogbz/webpack-compiler-plugin/badge.svg?branch=master)](https://coveralls.io/github/iamogbz/webpack-compiler-plugin?branch=master)
 [![npm version](https://badge.fury.io/js/webpack-compiler-plugin.svg)](https://badge.fury.io/js/webpack-compiler-plugin)
-[![Dependencies](https://david-dm.org/iamogbz/webpack-compiler-plugin/status.svg)](https://github.com/iamogbz/webpack-compiler-plugin)
-[![Dependabot badge](https://badgen.net/dependabot/iamogbz/crx-livereload/?icon=dependabot)](https://app.dependabot.com)
+[![Dependencies](https://img.shields.io/librariesio/github/iamogbz/webpack-compiler-plugin)](https://github.com/iamogbz/webpack-compiler-plugin)
+[![Dependabot badge](https://badgen.net/github/dependabot/iamogbz/webpack-compiler-plugin/?icon=dependabot)](https://app.dependabot.com)
 
 Easily listen to `webpack` compiler hooks and execute commands on events.
 
