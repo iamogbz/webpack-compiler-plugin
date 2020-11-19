@@ -11,7 +11,7 @@
         "url": "https://github.com/iamogbz/webpack-compiler-plugin/issues"
     },
     "homepage": "https://github.com/iamogbz/webpack-compiler-plugin#readme",
-    "license": "GPL-3.0",
+    "license": "Unlicense",
     "keywords": [
         "compile",
         "plugin",
