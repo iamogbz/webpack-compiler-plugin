@@ -1,7 +1,7 @@
 # Webpack Compiler Plugin
 
-[![Build Status](https://travis-ci.org/iamogbz/webpack-compiler-plugin.svg?branch=master)](https://travis-ci.org/iamogbz/webpack-compiler-plugin)
-[![Coverage Status](https://coveralls.io/repos/github/iamogbz/webpack-compiler-plugin/badge.svg?branch=master)](https://coveralls.io/github/iamogbz/webpack-compiler-plugin?branch=master)
+[![Build Status](https://github.com/iamogbz/webpack-compiler-plugin/workflows/Build/badge.svg)](https://github.com/iamogbz/webpack-compiler-plugin/actions?query=workflow%3ABuild)
+[![Coverage Status](https://coveralls.io/repos/github/iamogbz/webpack-compiler-plugin/badge.svg)](https://coveralls.io/github/iamogbz/webpack-compiler-plugin)
 [![npm version](https://badge.fury.io/js/webpack-compiler-plugin.svg)](https://badge.fury.io/js/webpack-compiler-plugin)
 [![Dependencies](https://img.shields.io/librariesio/github/iamogbz/webpack-compiler-plugin)](https://github.com/iamogbz/webpack-compiler-plugin)
 [![Dependabot badge](https://badgen.net/github/dependabot/iamogbz/webpack-compiler-plugin/?icon=dependabot)](https://app.dependabot.com)
