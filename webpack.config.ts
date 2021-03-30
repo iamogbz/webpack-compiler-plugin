@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 import * as path from "path";
-import { Configuration } from "webpack";
+import { Configuration, WebpackPluginInstance } from "webpack";
 import * as CopyPlugin from "copy-webpack-plugin";
 import { WebpackCompilerPlugin } from "./src";
 
@@ -47,14 +47,14 @@ const configuration: Configuration = {
                 },
             },
         }),
-        new CopyPlugin({
+        (new CopyPlugin({
             patterns: [
                 "package.json",
                 "README.md",
                 "built/src",
                 { from: "src/types.d.ts", to: outputPath },
             ],
-        }),
+        }) as unknown) as WebpackPluginInstance,
     ],
     resolve: {
         extensions: [".js", ".ts"],
