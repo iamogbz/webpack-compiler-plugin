@@ -30,7 +30,7 @@ const newPlugin = ({
         listeners,
         stageMessages,
     });
-    plugin.apply((mockCompiler as unknown) as Compiler);
+    plugin.apply(mockCompiler as unknown as Compiler);
     return plugin;
 };
 
@@ -55,10 +55,7 @@ describe("default listeners", () => {
         ["buildError", ["uncaughtException", new Error("Uncaught Error")]],
     ])("loads with default %s listener", (_, [event, arg]): void => {
         newPlugin({});
-        process.emit(
-            event as NodeJS.Signals,
-            (arg as unknown) as NodeJS.Signals,
-        );
+        process.emit(event as NodeJS.Signals, arg as unknown as NodeJS.Signals);
         expect(consoleErrorSpy.mock.calls).toMatchSnapshot("console error");
         expect(consoleLogSpy.mock.calls).toMatchSnapshot("console log");
         expect(processExitSpy.mock.calls).toMatchSnapshot("process exit");
