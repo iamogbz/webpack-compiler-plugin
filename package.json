@@ -93,7 +93,7 @@
         "@babel/preset-env": "^7.14.8",
         "@babel/preset-typescript": "^7.14.5",
         "@commitlint/cli": "^12.1.4",
-        "@commitlint/config-conventional": "^12.1.4",
+        "@commitlint/config-conventional": "^13.1.0",
         "@commitlint/travis-cli": "^13.1.0",
         "@semantic-release/github": "^7.2.3",
         "@types/chrome": "0.0.148",
