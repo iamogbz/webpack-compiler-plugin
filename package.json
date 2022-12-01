@@ -95,7 +95,7 @@
         "@commitlint/cli": "^17.3.0",
         "@commitlint/config-conventional": "^17.3.0",
         "@commitlint/travis-cli": "^17.3.0",
-        "@semantic-release/github": "^8.0.6",
+        "@semantic-release/github": "^8.0.7",
         "@types/chrome": "0.0.203",
         "@types/copy-webpack-plugin": "^10.1.0",
         "@types/jest": "^27.5.0",
