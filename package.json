@@ -124,7 +124,7 @@
         "prettier": "^2.8.0",
         "prettier-eslint": "^15.0.1",
         "rxjs": "^7.6.0",
-        "semantic-release": "^19.0.5",
+        "semantic-release": "^21.0.5",
         "stylelint": "^13.13.1",
         "stylelint-config-standard": "^22.0.0",
         "stylelint-config-styled-components": "^0.1.1",
