@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`default listeners loads with default buildError listener: console error 1`] = `
-Array [
-  Array [
+[
+  [
     [Error: Uncaught Error],
   ],
 ]
 `;
 
 exports[`default listeners loads with default buildError listener: console log 1`] = `
-Array [
-  Array [
+[
+  [
     "
 [1mwebpack-compiler-plugin:[22m [31m🚒 build failed[39m",
   ],
@@ -18,18 +18,18 @@ Array [
 `;
 
 exports[`default listeners loads with default buildError listener: process exit 1`] = `
-Array [
-  Array [
+[
+  [
     1,
   ],
 ]
 `;
 
-exports[`default listeners loads with default interrupt listener: console error 1`] = `Array []`;
+exports[`default listeners loads with default interrupt listener: console error 1`] = `[]`;
 
 exports[`default listeners loads with default interrupt listener: console log 1`] = `
-Array [
-  Array [
+[
+  [
     "
 [1mwebpack-compiler-plugin:[22m [33m🚧 build interrupted[39m",
   ],
@@ -37,22 +37,22 @@ Array [
 `;
 
 exports[`default listeners loads with default interrupt listener: process exit 1`] = `
-Array [
-  Array [
+[
+  [
     2,
   ],
 ]
 `;
 
-exports[`stage messages does not use default state messages buildStart 1`] = `Array []`;
+exports[`stage messages does not use default state messages buildStart 1`] = `[]`;
 
-exports[`stage messages does not use default state messages compileEnd 1`] = `Array []`;
+exports[`stage messages does not use default state messages compileEnd 1`] = `[]`;
 
-exports[`stage messages does not use default state messages compileStart 1`] = `Array []`;
+exports[`stage messages does not use default state messages compileStart 1`] = `[]`;
 
 exports[`stage messages uses default state messages buildStart 1`] = `
-Array [
-  Array [
+[
+  [
     "
 webpack-compiler-plugin: [34m🚀 build starting[39m",
   ],
@@ -60,8 +60,8 @@ webpack-compiler-plugin: [34m🚀 build starting[39m",
 `;
 
 exports[`stage messages uses default state messages compileEnd 1`] = `
-Array [
-  Array [
+[
+  [
     "
 webpack-compiler-plugin: [32m⌛ code compiled[39m",
   ],
@@ -69,8 +69,8 @@ webpack-compiler-plugin: [32m⌛ code compiled[39m",
 `;
 
 exports[`stage messages uses default state messages compileStart 1`] = `
-Array [
-  Array [
+[
+  [
     "
 webpack-compiler-plugin: [34m⏳ code compiling[39m",
   ],
