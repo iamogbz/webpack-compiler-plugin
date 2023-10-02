@@ -99,7 +99,7 @@
         "@types/chrome": "0.0.246",
         "@types/copy-webpack-plugin": "^10.1.0",
         "@types/jest": "^29.5.5",
-        "@types/node": "^20.7.1",
+        "@types/node": "^20.8.0",
         "@types/source-map": "^0.5.7",
         "@types/webpack": "^5.28.3",
         "@typescript-eslint/eslint-plugin": "^6.7.3",
