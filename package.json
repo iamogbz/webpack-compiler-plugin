@@ -98,7 +98,7 @@
         "@semantic-release/github": "^9.2.1",
         "@types/chrome": "0.0.248",
         "@types/copy-webpack-plugin": "^10.1.0",
-        "@types/jest": "^29.5.5",
+        "@types/jest": "^29.5.6",
         "@types/node": "^20.8.7",
         "@types/source-map": "^0.5.7",
         "@types/webpack": "^5.28.3",
