@@ -94,7 +94,7 @@
         "@babel/preset-typescript": "^7.23.2",
         "@commitlint/cli": "^18.0.0",
         "@commitlint/config-conventional": "^18.0.0",
-        "@commitlint/travis-cli": "^18.0.0",
+        "@commitlint/travis-cli": "^18.1.0",
         "@semantic-release/github": "^9.2.1",
         "@types/chrome": "0.0.248",
         "@types/copy-webpack-plugin": "^10.1.0",
