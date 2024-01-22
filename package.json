@@ -92,7 +92,7 @@
         "@babel/plugin-proposal-optional-chaining": "^7.21.0",
         "@babel/preset-env": "^7.23.8",
         "@babel/preset-typescript": "^7.23.3",
-        "@commitlint/cli": "^18.4.3",
+        "@commitlint/cli": "^18.5.0",
         "@commitlint/config-conventional": "^18.4.4",
         "@commitlint/travis-cli": "^18.4.4",
         "@semantic-release/github": "^9.2.6",
